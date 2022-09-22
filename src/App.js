@@ -1,23 +1,41 @@
 import logo from './logo.svg';
 import './App.css';
+import FirstPage from './components/FirstPage';
+import SecondPage from './components/SecondPage';
+import Thirdpage from './components/Thirdpage';
+import { Stepper, StepLabel, Step } from '@mui/material';
+import { WebStoriesSharp } from '@mui/icons-material';
 
 function App() {
+
+  function showStep(Step){
+    switch(Step){
+      case 1 :
+        return <FirstPage />
+      case 2 :
+        return <SecondPage />
+      case 3 :
+        return <Thirdpage />
+    }
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>
+        <h1 style={{color : 'green', textDecoration : 'underline'}}>Multi_form_page</h1>
+      </div>
+      <Stepper style={{width: '18%', margin:'auto', padding : '2rem'}} activeStep='1' orientation='horizontal'>
+        <Step>
+          <StepLabel></StepLabel>
+        </Step>
+        <Step>
+          <StepLabel></StepLabel>
+        </Step>
+        <Step>
+          <StepLabel></StepLabel>
+        </Step>
+      </Stepper>
+      {showStep(2)}
     </div>
   );
 }
