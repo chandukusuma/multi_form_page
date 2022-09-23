@@ -6,13 +6,13 @@ function Thirdpage() {
   return (
     <div>
             <div className='inner'>
-                <TextField label='first name' marign='normal' variant='outlined' color='secondary'>Hello world</TextField>
+                <TextField label='City' marign='normal' variant='outlined' color='secondary'>Hello world</TextField>
             </div>
             <div className='inner'>
-                <TextField label='last name' marign='normal' variant='outlined' color='secondary'>Hello world</TextField>
+                <TextField label='Landamark' marign='normal' variant='outlined' color='secondary'>Hello world</TextField>
             </div>
             <div className='inner'>
-                <TextField label='contact number' marign='normal' variant='outlined' color='secondary'>Hello world</TextField>
+                <TextField label='Postal code' marign='normal' variant='outlined' color='secondary'>Hello world</TextField>
             </div>
             <div className='inner'>
                 <Button variant='contained' color='primary'>Submit</Button>
