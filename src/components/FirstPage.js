@@ -11,16 +11,16 @@ function FirstPage() {
     return (
         <div>
             <div className='inner'>
-                <TextField label='first name' marign='normal' variant='outlined' color='secondary'>Hello world</TextField>
+                <TextField label='first name' value={data['firstname']} onChange={(e) => setData({...data, 'firstname' : e.target.value})} marign='normal' variant='outlined' color='secondary'>Hello world</TextField>
             </div>
             <div className='inner'>
-                <TextField label='last name' marign='normal' variant='outlined' color='secondary'>Hello world</TextField>
+                <TextField label='last name' value={data['lastname']} onChange={(e) => setData({...data, 'lastname' : e.target.value})} marign='normal' variant='outlined' color='secondary'>Hello world</TextField>
             </div>
             <div className='inner'>
-                <TextField label='contact number' marign='normal' variant='outlined' color='secondary'>Hello world</TextField>
+                <TextField label='contact number' value={data['contact']} onChange={(e) => setData({...data, 'contact' : e.target.value})} marign='normal' variant='outlined' color='secondary'>Hello world</TextField>
             </div>
             <div className='inner'>
-                <Button variant='contained' onClick={() => setStep(2)} color='primary'>Submit</Button>
+                <Button variant='contained' onClick={() => setStep(2)} color='primary'>Next</Button>
             </div>
         </div>
     )

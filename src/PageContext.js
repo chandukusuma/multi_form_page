@@ -9,9 +9,16 @@ const PageContext = () => {
     const [data,setData] = useState([]);
     const [finalData, setFinalData] = useState([]);
 
+    function submitData(){
+        setFinalData(finalData => [...finalData, data]);
+        setData("");
+        setStep(1);
+
+    }
+
   return (
     <div>
-        <diffStepContext.Provider value={{presentStep, setStep, data, setData, finalData, setFinalData}}>
+        <diffStepContext.Provider value={{presentStep, setStep, data, setData, finalData, setFinalData, submitData}}>
             <App />
         </diffStepContext.Provider>
     </div>

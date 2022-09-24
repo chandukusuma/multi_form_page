@@ -10,16 +10,17 @@ function SecondPage() {
   return (
     <div>
             <div className='inner'>
-                <TextField label='Email' marign='normal' variant='outlined' color='secondary'>Hello world</TextField>
+                <TextField label='Email' value={data['email']} onChange={(e) => setData({...data, 'email' : e.target.value})}  marign='normal' variant='outlined' color='secondary'>Hello world</TextField>
             </div>
             <div className='inner'>
-                <TextField label='Country' marign='normal' variant='outlined' color='secondary'>Hello world</TextField>
+                <TextField label='Country' value={data['country']} onChange={(e) => setData({...data, 'country' : e.target.value})} marign='normal' variant='outlined' color='secondary'>Hello world</TextField>
             </div>
             <div className='inner'>
-                <TextField label='District' marign='normal' variant='outlined' color='secondary'>Hello world</TextField>
+                <TextField label='District' value={data['district']} onChange={(e) => setData({...data, 'district' : e.target.value})} marign='normal' variant='outlined' color='secondary'>Hello world</TextField>
             </div>
             <div className='inner'>
-                <Button variant='contained' onClick={() => setStep(3)} color='primary'>Submit</Button>
+                <Button variant='contained' onClick={() => setStep(1)} color='secondary'>Back</Button>
+                <Button variant='contained' onClick={() => setStep(3)} color='primary'>Next</Button>
             </div>
     </div>
   )
